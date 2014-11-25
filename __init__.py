@@ -24,6 +24,8 @@ def main():
     valor=0
     tj1="turno jugador #1"
     tj2="turno jugador #2"
+    gana_j1="El ganador es el jugador #1"
+    gana_j2="El ganador es el jugador #2"
     ##img de teclas
     teclas=pygame.image.load("teclas/teclas.png").convert()
     #cargar fondo
@@ -92,7 +94,13 @@ def main():
                             #print j2
                             #print "turno",turno
                         else:
-                            print "ganador=jugador1"
+                            # "ganador=jugador1"
+                            l30=pygame.font.SysFont("Arial",40)
+                            iTP=l30.render(gana_j1,True,(50,50,50),(0,0,0))
+                            rTP=iTP.get_rect()
+                            rTP.centerx=150
+                            rTP.centery=300
+                            screen.blit(iTP,rTP)
                     else:
                         if(t2(*j2))==True:
                             t=lj2
@@ -100,7 +108,13 @@ def main():
                             print "turno jugador2"
                             print j2
                         else:
-                            print "ganador=jugador2"
+                            #print "ganador=jugador2"
+                            l30=pygame.font.SysFont("Arial",40)
+                            iTP=l30.render(gana_j2,True,(50,50,50),(0,0,0))
+                            rTP=iTP.get_rect()
+                            rTP.centerx=150
+                            rTP.centery=300
+                            screen.blit(iTP,rTP)
                 if evento.key==K_2:
                     valor=dado2
                     #turno=turno+1
@@ -113,7 +127,13 @@ def main():
                             #print j2
                             #print "turno",turno
                         else:
-                            print "ganador=jugador1"
+                            #print "ganador=jugador1"
+                            l30=pygame.font.SysFont("Arial",40)
+                            iTP=l30.render(gana_j1,True,(50,50,50),(0,0,0))
+                            rTP=iTP.get_rect()
+                            rTP.centerx=150
+                            rTP.centery=300
+                            screen.blit(iTP,rTP)
                     else:
                         if(t2(*j2))==True:
                             t=lj2
@@ -121,7 +141,13 @@ def main():
                             print "turno jugador2"
                             print j2
                         else:
-                            print "ganador=jugador2"
+                            #print "ganador=jugador2"
+                            l30=pygame.font.SysFont("Arial",40)
+                            iTP=l30.render(gana_j2,True,(50,50,50),(0,0,0))
+                            rTP=iTP.get_rect()
+                            rTP.centerx=150
+                            rTP.centery=300
+                            screen.blit(iTP,rTP)
                 if evento.key==K_3:
                     valor=dado1+dado2
                     #turno=turno+1
@@ -134,7 +160,13 @@ def main():
                             #print j2
                             #print "turno",turno
                         else:
-                            print "ganador=jugador1"
+                            #print "ganador=jugador1"
+                            l30=pygame.font.SysFont("Arial",40)
+                            iTP=l30.render(gana_j1,True,(50,50,50),(0,0,0))
+                            rTP=iTP.get_rect()
+                            rTP.centerx=150
+                            rTP.centery=300
+                            screen.blit(iTP,rTP)
                     else:
                         if(t2(*j2))==True:
                             t=lj2
@@ -142,7 +174,13 @@ def main():
                             print "turno jugador2"
                             print j2
                         else:
-                            print "ganador=jugador2"
+                            #print "ganador=jugador2"
+                            l30=pygame.font.SysFont("Arial",40)
+                            iTP=l30.render(gana_j2,True,(50,50,50),(0,0,0))
+                            rTP=iTP.get_rect()
+                            rTP.centerx=150
+                            rTP.centery=300
+                            screen.blit(iTP,rTP)
                 if turno%2==0:
                     #t=lj2
                     letra30=pygame.font.SysFont("Arial",20)
