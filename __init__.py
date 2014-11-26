@@ -45,9 +45,11 @@ def main():
     while True:
         screen.blit(d1,(350,150))
         screen.blit(d2,(350,250))
-        screen.blit(teclas,(20,400))
+        screen.blit(teclas,(500,200))
         #keys=pygame.key.get_pressed()
         for evento in pygame.event.get():
+            j1.sort
+            j2.sort
             if evento.type==QUIT:
                 sys.exit(0)
             elif evento.type==KEYUP:
@@ -95,7 +97,7 @@ def main():
                             #print "turno",turno
                         else:
                             # "ganador=jugador1"
-                            l30=pygame.font.SysFont("Arial",40)
+                            l30=pygame.font.SysFont("Arial",30)
                             iTP=l30.render(gana_j1,True,(50,50,50),(0,0,0))
                             rTP=iTP.get_rect()
                             rTP.centerx=150
@@ -109,7 +111,7 @@ def main():
                             print j2
                         else:
                             #print "ganador=jugador2"
-                            l30=pygame.font.SysFont("Arial",40)
+                            l30=pygame.font.SysFont("Arial",30)
                             iTP=l30.render(gana_j2,True,(50,50,50),(0,0,0))
                             rTP=iTP.get_rect()
                             rTP.centerx=150
@@ -128,7 +130,7 @@ def main():
                             #print "turno",turno
                         else:
                             #print "ganador=jugador1"
-                            l30=pygame.font.SysFont("Arial",40)
+                            l30=pygame.font.SysFont("Arial",30)
                             iTP=l30.render(gana_j1,True,(50,50,50),(0,0,0))
                             rTP=iTP.get_rect()
                             rTP.centerx=150
@@ -142,7 +144,7 @@ def main():
                             print j2
                         else:
                             #print "ganador=jugador2"
-                            l30=pygame.font.SysFont("Arial",40)
+                            l30=pygame.font.SysFont("Arial",30)
                             iTP=l30.render(gana_j2,True,(50,50,50),(0,0,0))
                             rTP=iTP.get_rect()
                             rTP.centerx=150
@@ -161,7 +163,7 @@ def main():
                             #print "turno",turno
                         else:
                             #print "ganador=jugador1"
-                            l30=pygame.font.SysFont("Arial",40)
+                            l30=pygame.font.SysFont("Arial",30)
                             iTP=l30.render(gana_j1,True,(50,50,50),(0,0,0))
                             rTP=iTP.get_rect()
                             rTP.centerx=150
@@ -175,7 +177,7 @@ def main():
                             print j2
                         else:
                             #print "ganador=jugador2"
-                            l30=pygame.font.SysFont("Arial",40)
+                            l30=pygame.font.SysFont("Arial",30)
                             iTP=l30.render(gana_j2,True,(50,50,50),(0,0,0))
                             rTP=iTP.get_rect()
                             rTP.centerx=150
@@ -198,6 +200,26 @@ def main():
                 screen.blit(imagenTextoPresent,rectanguloTextoPresent)
                 #screen.blit(t,(100,250))
                 #print turno
+        p1x=50
+        p2x=50
+        for er in j1:
+                qw=str(er)
+                letra=pygame.font.SysFont("Arial",30)
+                img_j1=letra.render(qw,True,(50,50,50),(0,0,0))
+                r_j1=img_j1.get_rect()
+                r_j1.centerx=p1x
+                p1x=p1x+50
+                r_j1.centery=50
+                screen.blit(img_j1,r_j1)
+        for er in j2:
+                qw=str(er)
+                letra=pygame.font.SysFont("Arial",30)
+                img_j1=letra.render(qw,True,(50,50,50),(0,0,0))
+                r_j1=img_j1.get_rect()
+                r_j1.centerx=p2x
+                p2x=p2x+50
+                r_j1.centery=500
+                screen.blit(img_j1,r_j1)
         pygame.display.flip()
     #return 0
 
